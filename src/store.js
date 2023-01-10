@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import dataSliceReducers from "./features/dataSlice";
-// import { logger } from './features/middleware'
+import { logger } from "./features/middleware";
 
 export const store = configureStore({
   reducer: {
-    data: dataSliceReducers
+    data: dataSliceReducers,
   },
-  // middleware: [logger]
+  middleware: [logger],
 });
